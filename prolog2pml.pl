@@ -1,8 +1,5 @@
-% --- files and uris --------------------------------------------------------
-:- dynamic proofName/1.
-
-% --- check to see if system or anyone loaded a fact for specifying the name of the proof
-proof_name(Name) :- proofName(Name).
+% Set up file name and URI of proof
+hasProofName(Name) :- Name = 'pml-proof'.
 
 protocol_name(Name) :-
   Name = 'file://'.
@@ -12,14 +9,14 @@ remote_protocol_name(Name) :-
 
 proof_file(Name) :-
   working_directory(Dir,Dir),
-  proof_name(Proof),
+  hasProofName(Proof),
   string_concat(Dir,Proof,Name1),
   string_concat(Name1,'1',Name2),
   string_concat(Name2,'.owl',Name).
 
 remote_proof_file(Name) :-
   tomcat_directory(Dir),
-  proof_name(Proof),
+  hasProofName(Proof),
   string_concat(Dir,Proof,Name1),
   string_concat(Name1,'.owl',Name).
 
@@ -34,13 +31,13 @@ proof_uri(Label,URI) :-
   protocol_name(ProtocolName),
   string_concat(ProtocolName,FileName2,Tmp1),
   string_concat(Tmp1,'#',Tmp2),
-  proof_name(ProofName),
+  hasProofName(ProofName),
   string_concat(Tmp2,ProofName,Tmp3),
   string_concat(Tmp3,'1_',Tmp4),
   string_concat(Tmp4,Label,URI).
 
 remote_proof_uri(Label,URI) :-
-  proof_name(ProofName),
+  hasProofName(ProofName),
   remote_protocol_name(ProtocolName),
   string_concat(ProtocolName,'iw.cs.utep.edu/dhs/examples/',Tmp0),
   string_concat(Tmp0,ProofName,Tmp1),
@@ -69,21 +66,22 @@ why(Goal) :-
   !, %% for now, print just the first answer.
   nl,
   label_tree(T,0,_,[],_,T2),
-  dump_pml(T2),
-  proof_uri('1',URI),
-  writeln(URI),
-  writeln('Loading Probe-It...'),
-  shell_command(URI,Command),
-  writeln(Command),
-  shell(Command).
+  dump_pml(T2).
+  
+  %proof_uri('1',URI),
+  %writeln(URI),
+  %writeln('Loading Probe-It...'),
+  %shell_command(URI,Command),
+  %writeln(Command),
+  %shell(Command).
   %win_exec(Command,0).
 
 % --- a main predicate: why(Goal, URI) ----------------------------------------------
 
 why(Goal,URI) :-
-% write('Generating proof tree file at '),
+  write('Generating proof tree file at '),
   remote_proof_file(FileName),
-% write(FileName),
+  write(FileName),
   clause_tree(Goal,[],T),
   !, %% for now, print just the first answer.
 % nl,
@@ -94,7 +92,7 @@ why(Goal,URI) :-
 
 % --- String replace rules ---------------------------------------------------
 
-replace(X,Y,[],[]).
+replace(_,_,[],[]).
 replace(X,Y,[X|R],[Y|S]) :- replace(X,Y,R,S).
 replace(X,Y,[F|R],[F|S]) :- replace(X,Y,R,S).
 
@@ -305,7 +303,7 @@ renderConclusionBody([Body]) :-
   write(Body).
 
 %---------------- Inference Steps -------------------------------
-inferenceSteps(Rule,[]).
+inferenceSteps(_,[]).
 inferenceSteps(Rule,[Ante|Rest]) :-
   merge([Rule],[Ante],Antes),
   inferenceStep(Antes),
