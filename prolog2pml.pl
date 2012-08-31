@@ -24,7 +24,7 @@ remote_proof_file(Name) :-
   string_concat(Name1,'.owl',Name).
 
 tomcat_directory(Name) :-
-  Name = 'C:/DHS-PML/pml/'.
+  Name = 'C:/Users/Nicholas/Desktop/visko-prolog/'.
 
 proof_uri(Label,URI) :-
   proof_file(FileName),
@@ -66,7 +66,7 @@ why(Goal) :-
   proof_file(FileName),
   write(FileName),
   clause_tree(Goal,[],T),
-  !,    %% for now, print just the first answer.
+  !, %% for now, print just the first answer.
   nl,
   label_tree(T,0,_,[],_,T2),
   dump_pml(T2),
@@ -81,12 +81,12 @@ why(Goal) :-
 % --- a main predicate: why(Goal, URI) ----------------------------------------------
 
 why(Goal,URI) :-
-%  write('Generating proof tree file at '),
+% write('Generating proof tree file at '),
   remote_proof_file(FileName),
-%  write(FileName),
+% write(FileName),
   clause_tree(Goal,[],T),
-  !,    %% for now, print just the first answer.
-%  nl,
+  !, %% for now, print just the first answer.
+% nl,
   label_tree(T,0,_,[],_,T2),
   dump_pml(T2),
   remote_proof_uri('1',URI),
@@ -112,7 +112,7 @@ toLegalXML(Input, Output) :- term_to_atom(Input,InputA),replaceLessThan(InputA,N
 % base case, the most simple clause tree contains a root "true"
 clause_tree(true,_,true) :- !.
 
-% handles case when clause body is disjunctive, 
+% handles case when clause body is disjunctive,
 clause_tree((G;R),Trail,TR) :-
    not(call(G)),
    call(R),
@@ -160,10 +160,10 @@ clause_tree(G,Trail,tree(G,([G,Body],T))) :-
    clause_tree(Body,[G|Trail],T).
    
 loop_detect(G,[G1,_]) :- G == G1.
-loop_detect(G,[_,R])  :- loop_detect(G,R).
+loop_detect(G,[_,R]) :- loop_detect(G,R).
 
 disjunctiveClause((_;_)).
-% --- label_tree for labelling proof nodes with a unique number  -------
+% --- label_tree for labelling proof nodes with a unique number -------
 
 label_tree(tree(Root,Branches),N1,N3,TA1,TA2,tree(A2,LB)) :- !,
   addOne(N1,N2),
@@ -186,20 +186,21 @@ label_tree(Node,N1,N2,A1,A2,[N2,Node]) :-
   addOne(N1,N2),
   append(A1,[N2],A2).
 
-addOne(N,N1) :- 
+addOne(N,N1) :-
   N1 is N + 1.
 
 % --- dumping_pml for dumping PML ---------------------------------------
 
 dump_pml(Tree) :-
-  telling(CurrentOutput),       /* current write output   */
-  remote_proof_file(ProofFile),        /* get proof file name    */
-  tell(ProofFile),              /* open this file         */
+  telling(CurrentOutput), /* current write output */
+  remote_proof_file(ProofFile), /* get proof file name */
+  string_to_atom(ProofFile, AProofFile),
+  tell(AProofFile), /* open this file */
   pml_header,
   draw_tree(Tree),
   pml_footer,
-  told,                         /* close ToFile           */
-  tell(CurrentOutput).          /* resume previous output */
+  told, /* close ToFile */
+  tell(CurrentOutput). /* resume previous output */
   
 draw_tree(tree(Root,Branches)) :- !,
    nodeset(Root),
@@ -222,19 +223,19 @@ draw_tree(Node) :-
   
 hasDisjunctiveConclusion((_;_)).
 
-% --- predicates for printing pml elements  ---------------------------
+% --- predicates for printing pml elements ---------------------------
 
 pml_header :-
   writeln('<rdf:RDF'),
-  writeln('  xmlns:pmlp="http://inference-web.org/2.0/pml-provenance.owl#"'),
-  writeln('  xmlns="http://inference-web.org/2.0/pml-justification.owl#"'),
-  writeln('  xmlns:ds="http://inference-web.org/2.0/ds.owl#"'),
-  writeln('  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"'),
-  writeln('  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"'),
-  writeln('  xmlns:owl="http://www.w3.org/2002/07/owl#"'),
-  writeln('  xmlns:daml="http://www.daml.org/2001/03/daml+oil#">').
+  writeln(' xmlns:pmlp="http://inference-web.org/2.0/pml-provenance.owl#"'),
+  writeln(' xmlns="http://inference-web.org/2.0/pml-justification.owl#"'),
+  writeln(' xmlns:ds="http://inference-web.org/2.0/ds.owl#"'),
+  writeln(' xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"'),
+  writeln(' xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"'),
+  writeln(' xmlns:owl="http://www.w3.org/2002/07/owl#"'),
+  writeln(' xmlns:daml="http://www.daml.org/2001/03/daml+oil#">').
   
-pml_footer :- 
+pml_footer :-
   writeln('</rdf:RDF>').
 
 mis_nodeset([Label|Node]) :-
@@ -262,7 +263,7 @@ hasAntecedents([Conclusion],Conclusion,[]) :- !.
 
 hasInferenceStepsAntecedents([Conclusion|[Rule|Antecedents]],Conclusion,Rule,Antecedents) :- !.
 
-nodesetH(Label) :- 
+nodesetH(Label) :-
   write('<NodeSet rdf:about="'),
   remote_proof_uri(Label,URI),
   write(URI),
@@ -314,7 +315,7 @@ inferenceStep(Antecedents) :-
   tab(3),
   writeln('<isConsequentOf>'),
   tab(5),
-  writeln('<InferenceStep>'),  
+  writeln('<InferenceStep>'),
   engine_and_rule(Antecedents),
   antecedents(Antecedents),
   writeln('</InferenceStep>'),
@@ -334,10 +335,10 @@ engine_and_rule(_) :-
 antecedents([]).
 antecedents(Antecedents) :-
   tab(7),
-  writeln('<hasAntecedentList>'), 
+  writeln('<hasAntecedentList>'),
   oneAntecedent(Antecedents),
   tab(7),
-  writeln('</hasAntecedentList>').  
+  writeln('</hasAntecedentList>').
 
 oneAntecedent([]).
 oneAntecedent([A1|A2]) :-
