@@ -9,7 +9,7 @@
     <NodeSet rdf:about="https://raw.github.com/nicholasdelrio/prolog2pml/master/pml/pml-proof.owl#pml-proof_1">
         <hasConclusion>
             <pmlp:Information>
-                <pmlp:hasRawString rdf:datatype="http://www.w3.org/2001/XMLSchema#string">isPopular(nick).</pmlp:hasRawString>
+                <pmlp:hasRawString rdf:datatype="http://www.w3.org/2001/XMLSchema#string">isCool(nick).</pmlp:hasRawString>
                 <pmlp:hasLanguage rdf:resource="http://inference-web.org/registry/LG/English.owl#English"/>
             </pmlp:Information>
         </hasConclusion>
@@ -49,7 +49,7 @@
     <NodeSet rdf:about="https://raw.github.com/nicholasdelrio/prolog2pml/master/pml/pml-proof.owl#pml-proof_2">
         <hasConclusion>
             <pmlp:Information>
-                <pmlp:hasRawString rdf:datatype="http://www.w3.org/2001/XMLSchema#string">isPopular(nick) :- [ (isWellLiked(nick);isGoodLooking(nick))].</pmlp:hasRawString>
+                <pmlp:hasRawString rdf:datatype="http://www.w3.org/2001/XMLSchema#string">isCool(nick) :- [ (isPopular(nick);isComputerScientist(nick))].</pmlp:hasRawString>
                 <pmlp:hasLanguage rdf:resource="http://inference-web.org/registry/LG/English.owl#English"/>
             </pmlp:Information>
         </hasConclusion>
@@ -63,7 +63,7 @@
     <NodeSet rdf:about="https://raw.github.com/nicholasdelrio/prolog2pml/master/pml/pml-proof.owl#pml-proof_3">
         <hasConclusion>
             <pmlp:Information>
-                <pmlp:hasRawString rdf:datatype="http://www.w3.org/2001/XMLSchema#string">isWellLiked(nick).</pmlp:hasRawString>
+                <pmlp:hasRawString rdf:datatype="http://www.w3.org/2001/XMLSchema#string">isPopular(nick).</pmlp:hasRawString>
                 <pmlp:hasLanguage rdf:resource="http://inference-web.org/registry/LG/English.owl#English"/>
             </pmlp:Information>
         </hasConclusion>
@@ -77,22 +77,11 @@
                             <ds:rest>
                         <NodeSetList>
                             <ds:first rdf:resource="https://raw.github.com/nicholasdelrio/prolog2pml/master/pml/pml-proof.owl#pml-proof_5"/>
-                        </NodeSetList>
-                            </ds:rest>
-                        </NodeSetList>
-                    </hasAntecedentList>
-            </InferenceStep>
-        </isConsequentOf>
-        <isConsequentOf>
-            <InferenceStep>
-                <hasInferenceEngine rdf:resource="http://inference-web.org/registry/IE/SWIPL.owl#SWIPL"/>
-                <hasInferenceRule rdf:resource="http://inference-web.org/registry/DPR/Hyp-Resolution.owl#Hyp-Resolution"/>
-                    <hasAntecedentList>
-                        <NodeSetList>
-                            <ds:first rdf:resource="https://raw.github.com/nicholasdelrio/prolog2pml/master/pml/pml-proof.owl#pml-proof_4"/>
                             <ds:rest>
                         <NodeSetList>
                             <ds:first rdf:resource="https://raw.github.com/nicholasdelrio/prolog2pml/master/pml/pml-proof.owl#pml-proof_7"/>
+                        </NodeSetList>
+                            </ds:rest>
                         </NodeSetList>
                             </ds:rest>
                         </NodeSetList>
@@ -103,7 +92,7 @@
     <NodeSet rdf:about="https://raw.github.com/nicholasdelrio/prolog2pml/master/pml/pml-proof.owl#pml-proof_4">
         <hasConclusion>
             <pmlp:Information>
-                <pmlp:hasRawString rdf:datatype="http://www.w3.org/2001/XMLSchema#string">isWellLiked(nick) :- [ (likedByMajority(nick);hasDieHardFriends(nick))].</pmlp:hasRawString>
+                <pmlp:hasRawString rdf:datatype="http://www.w3.org/2001/XMLSchema#string">isPopular(nick) :- [ (isWellKnown(nick),isWellLiked(nick))].</pmlp:hasRawString>
                 <pmlp:hasLanguage rdf:resource="http://inference-web.org/registry/LG/English.owl#English"/>
             </pmlp:Information>
         </hasConclusion>
@@ -117,7 +106,7 @@
     <NodeSet rdf:about="https://raw.github.com/nicholasdelrio/prolog2pml/master/pml/pml-proof.owl#pml-proof_5">
         <hasConclusion>
             <pmlp:Information>
-                <pmlp:hasRawString rdf:datatype="http://www.w3.org/2001/XMLSchema#string">likedByMajority(nick).</pmlp:hasRawString>
+                <pmlp:hasRawString rdf:datatype="http://www.w3.org/2001/XMLSchema#string">isWellKnown(nick).</pmlp:hasRawString>
                 <pmlp:hasLanguage rdf:resource="http://inference-web.org/registry/LG/English.owl#English"/>
             </pmlp:Information>
         </hasConclusion>
@@ -136,7 +125,7 @@
     <NodeSet rdf:about="https://raw.github.com/nicholasdelrio/prolog2pml/master/pml/pml-proof.owl#pml-proof_6">
         <hasConclusion>
             <pmlp:Information>
-                <pmlp:hasRawString rdf:datatype="http://www.w3.org/2001/XMLSchema#string">likedByMajority(nick) :- [true].</pmlp:hasRawString>
+                <pmlp:hasRawString rdf:datatype="http://www.w3.org/2001/XMLSchema#string">isWellKnown(nick) :- [true].</pmlp:hasRawString>
                 <pmlp:hasLanguage rdf:resource="http://inference-web.org/registry/LG/English.owl#English"/>
             </pmlp:Information>
         </hasConclusion>
@@ -150,7 +139,7 @@
     <NodeSet rdf:about="https://raw.github.com/nicholasdelrio/prolog2pml/master/pml/pml-proof.owl#pml-proof_7">
         <hasConclusion>
             <pmlp:Information>
-                <pmlp:hasRawString rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hasDieHardFriends(nick).</pmlp:hasRawString>
+                <pmlp:hasRawString rdf:datatype="http://www.w3.org/2001/XMLSchema#string">isWellLiked(nick).</pmlp:hasRawString>
                 <pmlp:hasLanguage rdf:resource="http://inference-web.org/registry/LG/English.owl#English"/>
             </pmlp:Information>
         </hasConclusion>
@@ -169,7 +158,7 @@
     <NodeSet rdf:about="https://raw.github.com/nicholasdelrio/prolog2pml/master/pml/pml-proof.owl#pml-proof_8">
         <hasConclusion>
             <pmlp:Information>
-                <pmlp:hasRawString rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hasDieHardFriends(nick) :- [true].</pmlp:hasRawString>
+                <pmlp:hasRawString rdf:datatype="http://www.w3.org/2001/XMLSchema#string">isWellLiked(nick) :- [true].</pmlp:hasRawString>
                 <pmlp:hasLanguage rdf:resource="http://inference-web.org/registry/LG/English.owl#English"/>
             </pmlp:Information>
         </hasConclusion>
@@ -183,7 +172,7 @@
     <NodeSet rdf:about="https://raw.github.com/nicholasdelrio/prolog2pml/master/pml/pml-proof.owl#pml-proof_9">
         <hasConclusion>
             <pmlp:Information>
-                <pmlp:hasRawString rdf:datatype="http://www.w3.org/2001/XMLSchema#string">isGoodLooking(nick).</pmlp:hasRawString>
+                <pmlp:hasRawString rdf:datatype="http://www.w3.org/2001/XMLSchema#string">isComputerScientist(nick).</pmlp:hasRawString>
                 <pmlp:hasLanguage rdf:resource="http://inference-web.org/registry/LG/English.owl#English"/>
             </pmlp:Information>
         </hasConclusion>
@@ -202,7 +191,7 @@
     <NodeSet rdf:about="https://raw.github.com/nicholasdelrio/prolog2pml/master/pml/pml-proof.owl#pml-proof_10">
         <hasConclusion>
             <pmlp:Information>
-                <pmlp:hasRawString rdf:datatype="http://www.w3.org/2001/XMLSchema#string">isGoodLooking(nick) :- [true].</pmlp:hasRawString>
+                <pmlp:hasRawString rdf:datatype="http://www.w3.org/2001/XMLSchema#string">isComputerScientist(nick) :- [true].</pmlp:hasRawString>
                 <pmlp:hasLanguage rdf:resource="http://inference-web.org/registry/LG/English.owl#English"/>
             </pmlp:Information>
         </hasConclusion>
