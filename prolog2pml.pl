@@ -1,6 +1,6 @@
 hasProofName('pml-proof').
 hasDumpDir('./pml/').
-hasBaseURL('https://raw.github.com/nicholasdelrio/prolog2pml/master/').
+hasBaseURL('https://raw.github.com/nicholasdelrio/prolog2pml/master/pml/').
 
 proof_file(Name) :-
 	hasDumpDir(Dir),

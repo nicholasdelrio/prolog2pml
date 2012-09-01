@@ -6,7 +6,7 @@
     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
     xmlns:owl="http://www.w3.org/2002/07/owl#"
     xmlns:daml="http://www.daml.org/2001/03/daml+oil#">
-    <NodeSet rdf:about="https://raw.github.com/nicholasdelrio/prolog2pml/master/pml-proof.owl#pml-proof_1">
+    <NodeSet rdf:about="https://raw.github.com/nicholasdelrio/prolog2pml/master/pml/pml-proof.owl#pml-proof_1">
         <hasConclusion>
             <pmlp:Information>
                 <pmlp:hasRawString rdf:datatype="http://www.w3.org/2001/XMLSchema#string">isPopular(nick).</pmlp:hasRawString>
@@ -19,10 +19,10 @@
                 <hasInferenceRule rdf:resource="http://inference-web.org/registry/DPR/Hyp-Resolution.owl#Hyp-Resolution"/>
                     <hasAntecedentList>
                         <NodeSetList>
-                            <ds:first rdf:resource="https://raw.github.com/nicholasdelrio/prolog2pml/master/pml-proof.owl#pml-proof_2"/>
+                            <ds:first rdf:resource="https://raw.github.com/nicholasdelrio/prolog2pml/master/pml/pml-proof.owl#pml-proof_2"/>
                             <ds:rest>
                         <NodeSetList>
-                            <ds:first rdf:resource="https://raw.github.com/nicholasdelrio/prolog2pml/master/pml-proof.owl#pml-proof_3"/>
+                            <ds:first rdf:resource="https://raw.github.com/nicholasdelrio/prolog2pml/master/pml/pml-proof.owl#pml-proof_3"/>
                         </NodeSetList>
                             </ds:rest>
                         </NodeSetList>
@@ -35,10 +35,10 @@
                 <hasInferenceRule rdf:resource="http://inference-web.org/registry/DPR/Hyp-Resolution.owl#Hyp-Resolution"/>
                     <hasAntecedentList>
                         <NodeSetList>
-                            <ds:first rdf:resource="https://raw.github.com/nicholasdelrio/prolog2pml/master/pml-proof.owl#pml-proof_2"/>
+                            <ds:first rdf:resource="https://raw.github.com/nicholasdelrio/prolog2pml/master/pml/pml-proof.owl#pml-proof_2"/>
                             <ds:rest>
                         <NodeSetList>
-                            <ds:first rdf:resource="https://raw.github.com/nicholasdelrio/prolog2pml/master/pml-proof.owl#pml-proof_9"/>
+                            <ds:first rdf:resource="https://raw.github.com/nicholasdelrio/prolog2pml/master/pml/pml-proof.owl#pml-proof_9"/>
                         </NodeSetList>
                             </ds:rest>
                         </NodeSetList>
@@ -46,7 +46,7 @@
             </InferenceStep>
         </isConsequentOf>
     </NodeSet>
-    <NodeSet rdf:about="https://raw.github.com/nicholasdelrio/prolog2pml/master/pml-proof.owl#pml-proof_2">
+    <NodeSet rdf:about="https://raw.github.com/nicholasdelrio/prolog2pml/master/pml/pml-proof.owl#pml-proof_2">
         <hasConclusion>
             <pmlp:Information>
                 <pmlp:hasRawString rdf:datatype="http://www.w3.org/2001/XMLSchema#string">isPopular(nick) :- [ (isWellLiked(nick);isGoodLooking(nick))].</pmlp:hasRawString>
@@ -60,7 +60,7 @@
             </InferenceStep>
         </isConsequentOf>
     </NodeSet>
-    <NodeSet rdf:about="https://raw.github.com/nicholasdelrio/prolog2pml/master/pml-proof.owl#pml-proof_3">
+    <NodeSet rdf:about="https://raw.github.com/nicholasdelrio/prolog2pml/master/pml/pml-proof.owl#pml-proof_3">
         <hasConclusion>
             <pmlp:Information>
                 <pmlp:hasRawString rdf:datatype="http://www.w3.org/2001/XMLSchema#string">isWellLiked(nick).</pmlp:hasRawString>
@@ -73,10 +73,10 @@
                 <hasInferenceRule rdf:resource="http://inference-web.org/registry/DPR/Hyp-Resolution.owl#Hyp-Resolution"/>
                     <hasAntecedentList>
                         <NodeSetList>
-                            <ds:first rdf:resource="https://raw.github.com/nicholasdelrio/prolog2pml/master/pml-proof.owl#pml-proof_4"/>
+                            <ds:first rdf:resource="https://raw.github.com/nicholasdelrio/prolog2pml/master/pml/pml-proof.owl#pml-proof_4"/>
                             <ds:rest>
                         <NodeSetList>
-                            <ds:first rdf:resource="https://raw.github.com/nicholasdelrio/prolog2pml/master/pml-proof.owl#pml-proof_5"/>
+                            <ds:first rdf:resource="https://raw.github.com/nicholasdelrio/prolog2pml/master/pml/pml-proof.owl#pml-proof_5"/>
                         </NodeSetList>
                             </ds:rest>
                         </NodeSetList>
@@ -89,10 +89,10 @@
                 <hasInferenceRule rdf:resource="http://inference-web.org/registry/DPR/Hyp-Resolution.owl#Hyp-Resolution"/>
                     <hasAntecedentList>
                         <NodeSetList>
-                            <ds:first rdf:resource="https://raw.github.com/nicholasdelrio/prolog2pml/master/pml-proof.owl#pml-proof_4"/>
+                            <ds:first rdf:resource="https://raw.github.com/nicholasdelrio/prolog2pml/master/pml/pml-proof.owl#pml-proof_4"/>
                             <ds:rest>
                         <NodeSetList>
-                            <ds:first rdf:resource="https://raw.github.com/nicholasdelrio/prolog2pml/master/pml-proof.owl#pml-proof_7"/>
+                            <ds:first rdf:resource="https://raw.github.com/nicholasdelrio/prolog2pml/master/pml/pml-proof.owl#pml-proof_7"/>
                         </NodeSetList>
                             </ds:rest>
                         </NodeSetList>
@@ -100,7 +100,7 @@
             </InferenceStep>
         </isConsequentOf>
     </NodeSet>
-    <NodeSet rdf:about="https://raw.github.com/nicholasdelrio/prolog2pml/master/pml-proof.owl#pml-proof_4">
+    <NodeSet rdf:about="https://raw.github.com/nicholasdelrio/prolog2pml/master/pml/pml-proof.owl#pml-proof_4">
         <hasConclusion>
             <pmlp:Information>
                 <pmlp:hasRawString rdf:datatype="http://www.w3.org/2001/XMLSchema#string">isWellLiked(nick) :- [ (likedByMajority(nick);hasDieHardFriends(nick))].</pmlp:hasRawString>
@@ -114,7 +114,7 @@
             </InferenceStep>
         </isConsequentOf>
     </NodeSet>
-    <NodeSet rdf:about="https://raw.github.com/nicholasdelrio/prolog2pml/master/pml-proof.owl#pml-proof_5">
+    <NodeSet rdf:about="https://raw.github.com/nicholasdelrio/prolog2pml/master/pml/pml-proof.owl#pml-proof_5">
         <hasConclusion>
             <pmlp:Information>
                 <pmlp:hasRawString rdf:datatype="http://www.w3.org/2001/XMLSchema#string">likedByMajority(nick).</pmlp:hasRawString>
@@ -127,13 +127,13 @@
                 <hasInferenceRule rdf:resource="http://inference-web.org/registry/DPR/Hyp-Resolution.owl#Hyp-Resolution"/>
                     <hasAntecedentList>
                         <NodeSetList>
-                            <ds:first rdf:resource="https://raw.github.com/nicholasdelrio/prolog2pml/master/pml-proof.owl#pml-proof_6"/>
+                            <ds:first rdf:resource="https://raw.github.com/nicholasdelrio/prolog2pml/master/pml/pml-proof.owl#pml-proof_6"/>
                         </NodeSetList>
                     </hasAntecedentList>
             </InferenceStep>
         </isConsequentOf>
     </NodeSet>
-    <NodeSet rdf:about="https://raw.github.com/nicholasdelrio/prolog2pml/master/pml-proof.owl#pml-proof_6">
+    <NodeSet rdf:about="https://raw.github.com/nicholasdelrio/prolog2pml/master/pml/pml-proof.owl#pml-proof_6">
         <hasConclusion>
             <pmlp:Information>
                 <pmlp:hasRawString rdf:datatype="http://www.w3.org/2001/XMLSchema#string">likedByMajority(nick) :- [true].</pmlp:hasRawString>
@@ -147,7 +147,7 @@
             </InferenceStep>
         </isConsequentOf>
     </NodeSet>
-    <NodeSet rdf:about="https://raw.github.com/nicholasdelrio/prolog2pml/master/pml-proof.owl#pml-proof_7">
+    <NodeSet rdf:about="https://raw.github.com/nicholasdelrio/prolog2pml/master/pml/pml-proof.owl#pml-proof_7">
         <hasConclusion>
             <pmlp:Information>
                 <pmlp:hasRawString rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hasDieHardFriends(nick).</pmlp:hasRawString>
@@ -160,13 +160,13 @@
                 <hasInferenceRule rdf:resource="http://inference-web.org/registry/DPR/Hyp-Resolution.owl#Hyp-Resolution"/>
                     <hasAntecedentList>
                         <NodeSetList>
-                            <ds:first rdf:resource="https://raw.github.com/nicholasdelrio/prolog2pml/master/pml-proof.owl#pml-proof_8"/>
+                            <ds:first rdf:resource="https://raw.github.com/nicholasdelrio/prolog2pml/master/pml/pml-proof.owl#pml-proof_8"/>
                         </NodeSetList>
                     </hasAntecedentList>
             </InferenceStep>
         </isConsequentOf>
     </NodeSet>
-    <NodeSet rdf:about="https://raw.github.com/nicholasdelrio/prolog2pml/master/pml-proof.owl#pml-proof_8">
+    <NodeSet rdf:about="https://raw.github.com/nicholasdelrio/prolog2pml/master/pml/pml-proof.owl#pml-proof_8">
         <hasConclusion>
             <pmlp:Information>
                 <pmlp:hasRawString rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hasDieHardFriends(nick) :- [true].</pmlp:hasRawString>
@@ -180,7 +180,7 @@
             </InferenceStep>
         </isConsequentOf>
     </NodeSet>
-    <NodeSet rdf:about="https://raw.github.com/nicholasdelrio/prolog2pml/master/pml-proof.owl#pml-proof_9">
+    <NodeSet rdf:about="https://raw.github.com/nicholasdelrio/prolog2pml/master/pml/pml-proof.owl#pml-proof_9">
         <hasConclusion>
             <pmlp:Information>
                 <pmlp:hasRawString rdf:datatype="http://www.w3.org/2001/XMLSchema#string">isGoodLooking(nick).</pmlp:hasRawString>
@@ -193,13 +193,13 @@
                 <hasInferenceRule rdf:resource="http://inference-web.org/registry/DPR/Hyp-Resolution.owl#Hyp-Resolution"/>
                     <hasAntecedentList>
                         <NodeSetList>
-                            <ds:first rdf:resource="https://raw.github.com/nicholasdelrio/prolog2pml/master/pml-proof.owl#pml-proof_10"/>
+                            <ds:first rdf:resource="https://raw.github.com/nicholasdelrio/prolog2pml/master/pml/pml-proof.owl#pml-proof_10"/>
                         </NodeSetList>
                     </hasAntecedentList>
             </InferenceStep>
         </isConsequentOf>
     </NodeSet>
-    <NodeSet rdf:about="https://raw.github.com/nicholasdelrio/prolog2pml/master/pml-proof.owl#pml-proof_10">
+    <NodeSet rdf:about="https://raw.github.com/nicholasdelrio/prolog2pml/master/pml/pml-proof.owl#pml-proof_10">
         <hasConclusion>
             <pmlp:Information>
                 <pmlp:hasRawString rdf:datatype="http://www.w3.org/2001/XMLSchema#string">isGoodLooking(nick) :- [true].</pmlp:hasRawString>
