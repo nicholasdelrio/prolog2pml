@@ -1,0 +1,216 @@
+<rdf:RDF
+    xmlns:pmlp="http://inference-web.org/2.0/pml-provenance.owl#"
+    xmlns="http://inference-web.org/2.0/pml-justification.owl#"
+    xmlns:ds="http://inference-web.org/2.0/ds.owl#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:daml="http://www.daml.org/2001/03/daml+oil#">
+    <NodeSet rdf:about="https://raw.github.com/nicholasdelrio/prolog2pml/master/pml-proof.owl#pml-proof_1">
+        <hasConclusion>
+            <pmlp:Information>
+                <pmlp:hasRawString rdf:datatype="http://www.w3.org/2001/XMLSchema#string">isPopular(nick).</pmlp:hasRawString>
+                <pmlp:hasLanguage rdf:resource="http://inference-web.org/registry/LG/English.owl#English"/>
+            </pmlp:Information>
+        </hasConclusion>
+        <isConsequentOf>
+            <InferenceStep>
+                <hasInferenceEngine rdf:resource="http://inference-web.org/registry/IE/SWIPL.owl#SWIPL"/>
+                <hasInferenceRule rdf:resource="http://inference-web.org/registry/DPR/Hyp-Resolution.owl#Hyp-Resolution"/>
+                    <hasAntecedentList>
+                        <NodeSetList>
+                            <ds:first rdf:resource="https://raw.github.com/nicholasdelrio/prolog2pml/master/pml-proof.owl#pml-proof_2"/>
+                            <ds:rest>
+                        <NodeSetList>
+                            <ds:first rdf:resource="https://raw.github.com/nicholasdelrio/prolog2pml/master/pml-proof.owl#pml-proof_3"/>
+                        </NodeSetList>
+                            </ds:rest>
+                        </NodeSetList>
+                    </hasAntecedentList>
+            </InferenceStep>
+        </isConsequentOf>
+        <isConsequentOf>
+            <InferenceStep>
+                <hasInferenceEngine rdf:resource="http://inference-web.org/registry/IE/SWIPL.owl#SWIPL"/>
+                <hasInferenceRule rdf:resource="http://inference-web.org/registry/DPR/Hyp-Resolution.owl#Hyp-Resolution"/>
+                    <hasAntecedentList>
+                        <NodeSetList>
+                            <ds:first rdf:resource="https://raw.github.com/nicholasdelrio/prolog2pml/master/pml-proof.owl#pml-proof_2"/>
+                            <ds:rest>
+                        <NodeSetList>
+                            <ds:first rdf:resource="https://raw.github.com/nicholasdelrio/prolog2pml/master/pml-proof.owl#pml-proof_9"/>
+                        </NodeSetList>
+                            </ds:rest>
+                        </NodeSetList>
+                    </hasAntecedentList>
+            </InferenceStep>
+        </isConsequentOf>
+    </NodeSet>
+    <NodeSet rdf:about="https://raw.github.com/nicholasdelrio/prolog2pml/master/pml-proof.owl#pml-proof_2">
+        <hasConclusion>
+            <pmlp:Information>
+                <pmlp:hasRawString rdf:datatype="http://www.w3.org/2001/XMLSchema#string">isPopular(nick) :- [ (isWellLiked(nick);isGoodLooking(nick))].</pmlp:hasRawString>
+                <pmlp:hasLanguage rdf:resource="http://inference-web.org/registry/LG/English.owl#English"/>
+            </pmlp:Information>
+        </hasConclusion>
+        <isConsequentOf>
+            <InferenceStep>
+                <hasInferenceEngine rdf:resource="http://inference-web.org/registry/IE/SWIPL.owl#SWIPL"/>
+                <hasInferenceRule rdf:resource="http://inference-web.org/registry/DPR/Told.owl#Told"/>
+            </InferenceStep>
+        </isConsequentOf>
+    </NodeSet>
+    <NodeSet rdf:about="https://raw.github.com/nicholasdelrio/prolog2pml/master/pml-proof.owl#pml-proof_3">
+        <hasConclusion>
+            <pmlp:Information>
+                <pmlp:hasRawString rdf:datatype="http://www.w3.org/2001/XMLSchema#string">isWellLiked(nick).</pmlp:hasRawString>
+                <pmlp:hasLanguage rdf:resource="http://inference-web.org/registry/LG/English.owl#English"/>
+            </pmlp:Information>
+        </hasConclusion>
+        <isConsequentOf>
+            <InferenceStep>
+                <hasInferenceEngine rdf:resource="http://inference-web.org/registry/IE/SWIPL.owl#SWIPL"/>
+                <hasInferenceRule rdf:resource="http://inference-web.org/registry/DPR/Hyp-Resolution.owl#Hyp-Resolution"/>
+                    <hasAntecedentList>
+                        <NodeSetList>
+                            <ds:first rdf:resource="https://raw.github.com/nicholasdelrio/prolog2pml/master/pml-proof.owl#pml-proof_4"/>
+                            <ds:rest>
+                        <NodeSetList>
+                            <ds:first rdf:resource="https://raw.github.com/nicholasdelrio/prolog2pml/master/pml-proof.owl#pml-proof_5"/>
+                        </NodeSetList>
+                            </ds:rest>
+                        </NodeSetList>
+                    </hasAntecedentList>
+            </InferenceStep>
+        </isConsequentOf>
+        <isConsequentOf>
+            <InferenceStep>
+                <hasInferenceEngine rdf:resource="http://inference-web.org/registry/IE/SWIPL.owl#SWIPL"/>
+                <hasInferenceRule rdf:resource="http://inference-web.org/registry/DPR/Hyp-Resolution.owl#Hyp-Resolution"/>
+                    <hasAntecedentList>
+                        <NodeSetList>
+                            <ds:first rdf:resource="https://raw.github.com/nicholasdelrio/prolog2pml/master/pml-proof.owl#pml-proof_4"/>
+                            <ds:rest>
+                        <NodeSetList>
+                            <ds:first rdf:resource="https://raw.github.com/nicholasdelrio/prolog2pml/master/pml-proof.owl#pml-proof_7"/>
+                        </NodeSetList>
+                            </ds:rest>
+                        </NodeSetList>
+                    </hasAntecedentList>
+            </InferenceStep>
+        </isConsequentOf>
+    </NodeSet>
+    <NodeSet rdf:about="https://raw.github.com/nicholasdelrio/prolog2pml/master/pml-proof.owl#pml-proof_4">
+        <hasConclusion>
+            <pmlp:Information>
+                <pmlp:hasRawString rdf:datatype="http://www.w3.org/2001/XMLSchema#string">isWellLiked(nick) :- [ (likedByMajority(nick);hasDieHardFriends(nick))].</pmlp:hasRawString>
+                <pmlp:hasLanguage rdf:resource="http://inference-web.org/registry/LG/English.owl#English"/>
+            </pmlp:Information>
+        </hasConclusion>
+        <isConsequentOf>
+            <InferenceStep>
+                <hasInferenceEngine rdf:resource="http://inference-web.org/registry/IE/SWIPL.owl#SWIPL"/>
+                <hasInferenceRule rdf:resource="http://inference-web.org/registry/DPR/Told.owl#Told"/>
+            </InferenceStep>
+        </isConsequentOf>
+    </NodeSet>
+    <NodeSet rdf:about="https://raw.github.com/nicholasdelrio/prolog2pml/master/pml-proof.owl#pml-proof_5">
+        <hasConclusion>
+            <pmlp:Information>
+                <pmlp:hasRawString rdf:datatype="http://www.w3.org/2001/XMLSchema#string">likedByMajority(nick).</pmlp:hasRawString>
+                <pmlp:hasLanguage rdf:resource="http://inference-web.org/registry/LG/English.owl#English"/>
+            </pmlp:Information>
+        </hasConclusion>
+        <isConsequentOf>
+            <InferenceStep>
+                <hasInferenceEngine rdf:resource="http://inference-web.org/registry/IE/SWIPL.owl#SWIPL"/>
+                <hasInferenceRule rdf:resource="http://inference-web.org/registry/DPR/Hyp-Resolution.owl#Hyp-Resolution"/>
+                    <hasAntecedentList>
+                        <NodeSetList>
+                            <ds:first rdf:resource="https://raw.github.com/nicholasdelrio/prolog2pml/master/pml-proof.owl#pml-proof_6"/>
+                        </NodeSetList>
+                    </hasAntecedentList>
+            </InferenceStep>
+        </isConsequentOf>
+    </NodeSet>
+    <NodeSet rdf:about="https://raw.github.com/nicholasdelrio/prolog2pml/master/pml-proof.owl#pml-proof_6">
+        <hasConclusion>
+            <pmlp:Information>
+                <pmlp:hasRawString rdf:datatype="http://www.w3.org/2001/XMLSchema#string">likedByMajority(nick) :- [true].</pmlp:hasRawString>
+                <pmlp:hasLanguage rdf:resource="http://inference-web.org/registry/LG/English.owl#English"/>
+            </pmlp:Information>
+        </hasConclusion>
+        <isConsequentOf>
+            <InferenceStep>
+                <hasInferenceEngine rdf:resource="http://inference-web.org/registry/IE/SWIPL.owl#SWIPL"/>
+                <hasInferenceRule rdf:resource="http://inference-web.org/registry/DPR/Told.owl#Told"/>
+            </InferenceStep>
+        </isConsequentOf>
+    </NodeSet>
+    <NodeSet rdf:about="https://raw.github.com/nicholasdelrio/prolog2pml/master/pml-proof.owl#pml-proof_7">
+        <hasConclusion>
+            <pmlp:Information>
+                <pmlp:hasRawString rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hasDieHardFriends(nick).</pmlp:hasRawString>
+                <pmlp:hasLanguage rdf:resource="http://inference-web.org/registry/LG/English.owl#English"/>
+            </pmlp:Information>
+        </hasConclusion>
+        <isConsequentOf>
+            <InferenceStep>
+                <hasInferenceEngine rdf:resource="http://inference-web.org/registry/IE/SWIPL.owl#SWIPL"/>
+                <hasInferenceRule rdf:resource="http://inference-web.org/registry/DPR/Hyp-Resolution.owl#Hyp-Resolution"/>
+                    <hasAntecedentList>
+                        <NodeSetList>
+                            <ds:first rdf:resource="https://raw.github.com/nicholasdelrio/prolog2pml/master/pml-proof.owl#pml-proof_8"/>
+                        </NodeSetList>
+                    </hasAntecedentList>
+            </InferenceStep>
+        </isConsequentOf>
+    </NodeSet>
+    <NodeSet rdf:about="https://raw.github.com/nicholasdelrio/prolog2pml/master/pml-proof.owl#pml-proof_8">
+        <hasConclusion>
+            <pmlp:Information>
+                <pmlp:hasRawString rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hasDieHardFriends(nick) :- [true].</pmlp:hasRawString>
+                <pmlp:hasLanguage rdf:resource="http://inference-web.org/registry/LG/English.owl#English"/>
+            </pmlp:Information>
+        </hasConclusion>
+        <isConsequentOf>
+            <InferenceStep>
+                <hasInferenceEngine rdf:resource="http://inference-web.org/registry/IE/SWIPL.owl#SWIPL"/>
+                <hasInferenceRule rdf:resource="http://inference-web.org/registry/DPR/Told.owl#Told"/>
+            </InferenceStep>
+        </isConsequentOf>
+    </NodeSet>
+    <NodeSet rdf:about="https://raw.github.com/nicholasdelrio/prolog2pml/master/pml-proof.owl#pml-proof_9">
+        <hasConclusion>
+            <pmlp:Information>
+                <pmlp:hasRawString rdf:datatype="http://www.w3.org/2001/XMLSchema#string">isGoodLooking(nick).</pmlp:hasRawString>
+                <pmlp:hasLanguage rdf:resource="http://inference-web.org/registry/LG/English.owl#English"/>
+            </pmlp:Information>
+        </hasConclusion>
+        <isConsequentOf>
+            <InferenceStep>
+                <hasInferenceEngine rdf:resource="http://inference-web.org/registry/IE/SWIPL.owl#SWIPL"/>
+                <hasInferenceRule rdf:resource="http://inference-web.org/registry/DPR/Hyp-Resolution.owl#Hyp-Resolution"/>
+                    <hasAntecedentList>
+                        <NodeSetList>
+                            <ds:first rdf:resource="https://raw.github.com/nicholasdelrio/prolog2pml/master/pml-proof.owl#pml-proof_10"/>
+                        </NodeSetList>
+                    </hasAntecedentList>
+            </InferenceStep>
+        </isConsequentOf>
+    </NodeSet>
+    <NodeSet rdf:about="https://raw.github.com/nicholasdelrio/prolog2pml/master/pml-proof.owl#pml-proof_10">
+        <hasConclusion>
+            <pmlp:Information>
+                <pmlp:hasRawString rdf:datatype="http://www.w3.org/2001/XMLSchema#string">isGoodLooking(nick) :- [true].</pmlp:hasRawString>
+                <pmlp:hasLanguage rdf:resource="http://inference-web.org/registry/LG/English.owl#English"/>
+            </pmlp:Information>
+        </hasConclusion>
+        <isConsequentOf>
+            <InferenceStep>
+                <hasInferenceEngine rdf:resource="http://inference-web.org/registry/IE/SWIPL.owl#SWIPL"/>
+                <hasInferenceRule rdf:resource="http://inference-web.org/registry/DPR/Told.owl#Told"/>
+            </InferenceStep>
+        </isConsequentOf>
+    </NodeSet>
+</rdf:RDF>
