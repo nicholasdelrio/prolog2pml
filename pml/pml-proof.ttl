@@ -1,0 +1,182 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix pmlp: <http://inference-web.org/2.0/pml-provenance.owl#> .
+@prefix : <http://inference-web.org/2.0/pml-justification.owl#> .
+@prefix ds: <http://inference-web.org/2.0/ds.owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix daml: <http://www.daml.org/2001/03/daml+oil#> .
+
+<https://raw.github.com/nicholasdelrio/prolog2pml/master/pml/pml-proof.owl#pml-proof_1>
+    :hasConclusion [
+        pmlp:hasLanguage <http://inference-web.org/registry/LG/English.owl#English> ;
+        pmlp:hasRawString "isCool(nick)."^^<http://www.w3.org/2001/XMLSchema#string> ;
+        a pmlp:Information
+    ] ;
+    :isConsequentOf [
+        :hasAntecedentList [
+            ds:first <https://raw.github.com/nicholasdelrio/prolog2pml/master/pml/pml-proof.owl#pml-proof_2> ;
+            ds:rest [
+                ds:first <https://raw.github.com/nicholasdelrio/prolog2pml/master/pml/pml-proof.owl#pml-proof_3> ;
+                a :NodeSetList
+            ] ;
+            a :NodeSetList
+        ] ;
+        :hasInferenceEngine <http://inference-web.org/registry/IE/SWIPL.owl#SWIPL> ;
+        :hasInferenceRule <http://inference-web.org/registry/DPR/Hyp-Resolution.owl#Hyp-Resolution> ;
+        a :InferenceStep
+    ], [
+        :hasAntecedentList [
+            ds:first <https://raw.github.com/nicholasdelrio/prolog2pml/master/pml/pml-proof.owl#pml-proof_2> ;
+            ds:rest [
+                ds:first <https://raw.github.com/nicholasdelrio/prolog2pml/master/pml/pml-proof.owl#pml-proof_9> ;
+                a :NodeSetList
+            ] ;
+            a :NodeSetList
+        ] ;
+        :hasInferenceEngine <http://inference-web.org/registry/IE/SWIPL.owl#SWIPL> ;
+        :hasInferenceRule <http://inference-web.org/registry/DPR/Hyp-Resolution.owl#Hyp-Resolution> ;
+        a :InferenceStep
+    ] ;
+    a :NodeSet .
+
+<https://raw.github.com/nicholasdelrio/prolog2pml/master/pml/pml-proof.owl#pml-proof_10>
+    :hasConclusion [
+        pmlp:hasLanguage <http://inference-web.org/registry/LG/English.owl#English> ;
+        pmlp:hasRawString "isComputerScientist(nick) :- [true]."^^<http://www.w3.org/2001/XMLSchema#string> ;
+        a pmlp:Information
+    ] ;
+    :isConsequentOf [
+        :hasInferenceEngine <http://inference-web.org/registry/IE/SWIPL.owl#SWIPL> ;
+        :hasInferenceRule <http://inference-web.org/registry/DPR/Told.owl#Told> ;
+        a :InferenceStep
+    ] ;
+    a :NodeSet .
+
+<https://raw.github.com/nicholasdelrio/prolog2pml/master/pml/pml-proof.owl#pml-proof_2>
+    :hasConclusion [
+        pmlp:hasLanguage <http://inference-web.org/registry/LG/English.owl#English> ;
+        pmlp:hasRawString "isCool(nick) :- [ (isPopular(nick);isComputerScientist(nick))]."^^<http://www.w3.org/2001/XMLSchema#string> ;
+        a pmlp:Information
+    ] ;
+    :isConsequentOf [
+        :hasInferenceEngine <http://inference-web.org/registry/IE/SWIPL.owl#SWIPL> ;
+        :hasInferenceRule <http://inference-web.org/registry/DPR/Told.owl#Told> ;
+        a :InferenceStep
+    ] ;
+    a :NodeSet .
+
+<https://raw.github.com/nicholasdelrio/prolog2pml/master/pml/pml-proof.owl#pml-proof_3>
+    :hasConclusion [
+        pmlp:hasLanguage <http://inference-web.org/registry/LG/English.owl#English> ;
+        pmlp:hasRawString "isPopular(nick)."^^<http://www.w3.org/2001/XMLSchema#string> ;
+        a pmlp:Information
+    ] ;
+    :isConsequentOf [
+        :hasAntecedentList [
+            ds:first <https://raw.github.com/nicholasdelrio/prolog2pml/master/pml/pml-proof.owl#pml-proof_4> ;
+            ds:rest [
+                ds:first <https://raw.github.com/nicholasdelrio/prolog2pml/master/pml/pml-proof.owl#pml-proof_5> ;
+                ds:rest [
+                    ds:first <https://raw.github.com/nicholasdelrio/prolog2pml/master/pml/pml-proof.owl#pml-proof_7> ;
+                    a :NodeSetList
+                ] ;
+                a :NodeSetList
+            ] ;
+            a :NodeSetList
+        ] ;
+        :hasInferenceEngine <http://inference-web.org/registry/IE/SWIPL.owl#SWIPL> ;
+        :hasInferenceRule <http://inference-web.org/registry/DPR/Hyp-Resolution.owl#Hyp-Resolution> ;
+        a :InferenceStep
+    ] ;
+    a :NodeSet .
+
+<https://raw.github.com/nicholasdelrio/prolog2pml/master/pml/pml-proof.owl#pml-proof_4>
+    :hasConclusion [
+        pmlp:hasLanguage <http://inference-web.org/registry/LG/English.owl#English> ;
+        pmlp:hasRawString "isPopular(nick) :- [ (isWellKnown(nick),isWellLiked(nick))]."^^<http://www.w3.org/2001/XMLSchema#string> ;
+        a pmlp:Information
+    ] ;
+    :isConsequentOf [
+        :hasInferenceEngine <http://inference-web.org/registry/IE/SWIPL.owl#SWIPL> ;
+        :hasInferenceRule <http://inference-web.org/registry/DPR/Told.owl#Told> ;
+        a :InferenceStep
+    ] ;
+    a :NodeSet .
+
+<https://raw.github.com/nicholasdelrio/prolog2pml/master/pml/pml-proof.owl#pml-proof_5>
+    :hasConclusion [
+        pmlp:hasLanguage <http://inference-web.org/registry/LG/English.owl#English> ;
+        pmlp:hasRawString "isWellKnown(nick)."^^<http://www.w3.org/2001/XMLSchema#string> ;
+        a pmlp:Information
+    ] ;
+    :isConsequentOf [
+        :hasAntecedentList [
+            ds:first <https://raw.github.com/nicholasdelrio/prolog2pml/master/pml/pml-proof.owl#pml-proof_6> ;
+            a :NodeSetList
+        ] ;
+        :hasInferenceEngine <http://inference-web.org/registry/IE/SWIPL.owl#SWIPL> ;
+        :hasInferenceRule <http://inference-web.org/registry/DPR/Hyp-Resolution.owl#Hyp-Resolution> ;
+        a :InferenceStep
+    ] ;
+    a :NodeSet .
+
+<https://raw.github.com/nicholasdelrio/prolog2pml/master/pml/pml-proof.owl#pml-proof_6>
+    :hasConclusion [
+        pmlp:hasLanguage <http://inference-web.org/registry/LG/English.owl#English> ;
+        pmlp:hasRawString "isWellKnown(nick) :- [true]."^^<http://www.w3.org/2001/XMLSchema#string> ;
+        a pmlp:Information
+    ] ;
+    :isConsequentOf [
+        :hasInferenceEngine <http://inference-web.org/registry/IE/SWIPL.owl#SWIPL> ;
+        :hasInferenceRule <http://inference-web.org/registry/DPR/Told.owl#Told> ;
+        a :InferenceStep
+    ] ;
+    a :NodeSet .
+
+<https://raw.github.com/nicholasdelrio/prolog2pml/master/pml/pml-proof.owl#pml-proof_7>
+    :hasConclusion [
+        pmlp:hasLanguage <http://inference-web.org/registry/LG/English.owl#English> ;
+        pmlp:hasRawString "isWellLiked(nick)."^^<http://www.w3.org/2001/XMLSchema#string> ;
+        a pmlp:Information
+    ] ;
+    :isConsequentOf [
+        :hasAntecedentList [
+            ds:first <https://raw.github.com/nicholasdelrio/prolog2pml/master/pml/pml-proof.owl#pml-proof_8> ;
+            a :NodeSetList
+        ] ;
+        :hasInferenceEngine <http://inference-web.org/registry/IE/SWIPL.owl#SWIPL> ;
+        :hasInferenceRule <http://inference-web.org/registry/DPR/Hyp-Resolution.owl#Hyp-Resolution> ;
+        a :InferenceStep
+    ] ;
+    a :NodeSet .
+
+<https://raw.github.com/nicholasdelrio/prolog2pml/master/pml/pml-proof.owl#pml-proof_8>
+    :hasConclusion [
+        pmlp:hasLanguage <http://inference-web.org/registry/LG/English.owl#English> ;
+        pmlp:hasRawString "isWellLiked(nick) :- [true]."^^<http://www.w3.org/2001/XMLSchema#string> ;
+        a pmlp:Information
+    ] ;
+    :isConsequentOf [
+        :hasInferenceEngine <http://inference-web.org/registry/IE/SWIPL.owl#SWIPL> ;
+        :hasInferenceRule <http://inference-web.org/registry/DPR/Told.owl#Told> ;
+        a :InferenceStep
+    ] ;
+    a :NodeSet .
+
+<https://raw.github.com/nicholasdelrio/prolog2pml/master/pml/pml-proof.owl#pml-proof_9>
+    :hasConclusion [
+        pmlp:hasLanguage <http://inference-web.org/registry/LG/English.owl#English> ;
+        pmlp:hasRawString "isComputerScientist(nick)."^^<http://www.w3.org/2001/XMLSchema#string> ;
+        a pmlp:Information
+    ] ;
+    :isConsequentOf [
+        :hasAntecedentList [
+            ds:first <https://raw.github.com/nicholasdelrio/prolog2pml/master/pml/pml-proof.owl#pml-proof_10> ;
+            a :NodeSetList
+        ] ;
+        :hasInferenceEngine <http://inference-web.org/registry/IE/SWIPL.owl#SWIPL> ;
+        :hasInferenceRule <http://inference-web.org/registry/DPR/Hyp-Resolution.owl#Hyp-Resolution> ;
+        a :InferenceStep
+    ] ;
+    a :NodeSet .
+
