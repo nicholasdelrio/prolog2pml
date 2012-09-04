@@ -252,7 +252,7 @@ conclusion(Conclusion) :-
 	renderConclusion(Conclusion),
 	write('</pmlp:hasRawString>\n'),
 	tab(16),
-	writeln('<pmlp:hasLanguage rdf:resource="http://inference-web.org/registry/LG/English.owl#English"/>'),
+	writeln('<pmlp:hasLanguage rdf:resource="https://raw.github.com/nicholasdelrio/visko/master/resources/languages/Prolog.owl#Prolog"/>'),
 	tab(12),
 	writeln('</pmlp:Information>'),
 	tab(8),
